@@ -35,23 +35,10 @@ How components interact
 - Modules register study loaders and importers (`coreApp.registerStudyImporter`) so the UI can open files from disk, URL or folder and present them using the module's viewers.
 - Worker code (memory manager, montage, file parsing) is registered/overridden through `coreApp.setWorkerOverride`. The default interface entry script demonstrates common patterns for setting these overrides.
 
-Use in medical education and research
--------------------------------------
-Epicurrents is designed as an extensible platform for exploring biosignals and related documents. Typical applications include:
-
-- Teaching: instructors can build interactive demonstrations that load sample studies and annotate signals.
-- Research: studies and recordings in different formats can be viewed and annotated in a single UI. Researchers can run analyses using Python or machine learning models on recordings and visualize the results alongside signals and metadata.
-- Prototyping: new file readers, analysis services or visualization modules can be developed independently and integrated via the core API.
-
 Interface example and documentation
 -----------------------------------
 - The `interface` repository demonstrates how to wire up modules, workers, services and the UI. See `src/setups/default.ts` for a concrete example of registering modules and worker overrides programmatically.
 - Further documentation and usage examples are available in the online docs: https://docs.epicurrents.io
-
-Docs and examples
------------------
-- API and user documentation: https://docs.epicurrents.io
-- Inspect the `interface` example and the `src/setups/standalone.ts` entry script for concrete module and worker registration patterns.
 
 License
 -------
